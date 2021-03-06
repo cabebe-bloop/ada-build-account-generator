@@ -1,0 +1,19 @@
+import random
+
+names = ["MICHAEL CHE", "JOHN MULANEY", "HARI KONDABOLU", "BETH STELLING", "AMBER RUFFIN"]
+
+id = []
+for i in range(len(names)):
+  id.append(random.randint(111111, 999999))
+
+emails = []
+i = 0
+for name in names:
+  [first,last] = name.split(" ")
+  emails.append(first[0]+last+str(id[i])[-3:]+"@example.org")
+  i += 1
+
+for i in range(5):
+  print(f"Name: {names[i]}")
+  print(f"ID Number: {id[i]}")
+  print(f"email address: {emails[i]}\n")
